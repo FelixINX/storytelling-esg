@@ -143,6 +143,24 @@
         width: 100%;
       }
 
+      #mobile {
+        display: none;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffdbcc;
+        color: #370e00;
+      }
+
+      #mobile b {
+        font-size: 32px;
+        letter-spacing: -0.96px;
+        line-height: 40px;
+        text-align: center;
+        margin: 24px;
+      }
+
       @media (max-width: 750px) {
         .centered,
         .lefty,
@@ -150,6 +168,15 @@
         .fully {
           width: 90vw;
           margin: 0 auto;
+        }
+
+        #mobile {
+          display: flex !important;
+        }
+
+        #map,
+        #story {
+          display: none;
         }
       }
 
@@ -162,6 +189,9 @@
     </style>
   </head>
   <body>
+    <div id="mobile">
+      <b>La carte intéractive fonctionne uniquement sur les écrans plus large.</b>
+    </div>
     <div id="map"></div>
     <div id="story"></div>
     <script>
